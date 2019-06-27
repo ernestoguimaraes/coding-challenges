@@ -16,8 +16,10 @@ func trim(str string) string {
 }
 
 func checkExpectations(result string, expected string) Pair {
+	fmt.Printf("r:%d e:%d", len(result), len(expected))
 	if expected != result {
 		return Pair{false, fmt.Sprintf("Unexpected output %s, the expected is %s", result, expected)}
+
 	}
 	return Pair{true, ""}
 }
